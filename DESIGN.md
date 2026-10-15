@@ -116,7 +116,7 @@ Always pair status colors with text. The empty-notice status describes whether a
 
 The primary font is Pretendard Variable, loaded from a CDN. If it fails to load, use the system font fallbacks defined in `public/styles.css`.
 
-The root font size is 100% by default, 106.25% at 48rem and above, and 112.5% at 72rem and above. With a browser default of 16px, these correspond to 16px, 17px, and 18px. Tokens expressed in `rem` follow the root size. Situation titles, situation descriptions, and the bookmark note retain their 16px size.
+The root font size is 100% by default, 106.25% at 48rem and above, and 112.5% at 72rem and above. With a browser default of 16px, these correspond to 16px, 17px, and 18px. Tokens expressed in `rem` follow the root size. Situation titles, situation descriptions, the bookmark note, official account rows, and the account verification note retain their 16px size.
 
 | Role | Default token | At 40rem and above |
 | --- | --- | --- |
@@ -137,7 +137,7 @@ Use a line height of 1.75 for body text and 1.45 for headings. Situation titles 
 
 Center the content within a maximum width of 880px. On narrow screens, keep 20px of outer space on each side. Avoid excessive top spacing that pushes notices farther down the page.
 
-The reading order is: site name → page title and introduction → address panel → notice card → situations in which visitors should check this page.
+The reading order is: site name → page title and introduction → address panel → notice card → situations in which visitors should check this page → official addresses and accounts.
 
 | Area | Default | At 40rem and above |
 | --- | --- | --- |
@@ -146,10 +146,11 @@ The reading order is: site name → page title and introduction → address pane
 | Address panel vertical / horizontal padding | 8px / 16px | 8px / 24px |
 | Notice card padding | 24px | 36px |
 | Supporting section top and bottom padding | 36px | 40px |
+| Official accounts bottom padding | 36px | 40px |
 
-- Use a 4px gap between address rows and 24px between the address panel and notice card.
+- Use 24px between the address panel and notice card.
 - Use 16px between situation items and 2px between each item's title and description.
-- Keep a minimum interactive height of 44px for the brand and address links.
+- Keep a minimum interactive height of 44px for the brand, address links, and official account links.
 - Long domains and Korean sentences must wrap without causing horizontal overflow on narrow screens.
 - Adjust layout and heading sizes at 40rem. Adjust the root font size at 48rem and 72rem.
 
@@ -171,10 +172,11 @@ The card border and divider above the notice's supporting note are 1px lines in 
 YAML components describe the styles of existing interface elements. The `-wide` variants contain values that change at 40rem and above. The `-dark` variants contain values that change in the dark theme. All other properties retain the base component values.
 
 - **Header:** Display only the site name.
-- **Address panel:** Place the main site address above the operations notice address. Use the vertical and horizontal padding defined in the Layout table.
+- **Address panel:** Show only the main site address in this top panel. Keep the operations notice address in the lower verification section. Use the vertical and horizontal padding defined in the Layout table.
 - **Notice card:** Arrange the status, updated timestamp, title, body, and supporting note in that order.
 - **Status badge:** Use 4px of vertical padding and 12px of horizontal padding.
 - **Situations:** Use a vertical list with each description below its title.
+- **Official addresses and accounts:** Place an address and account verification section below the situations section. Explain that the list helps prevent phishing and impersonation, and ask visitors to compare URLs as well as display names. Reuse the section heading style and place the verification note 12px below it in muted 16px text. List the main site address and operations notice address in that order, then group the `linkymeadow` organization, `linkymeadow-human`, and `linkymeadow-bot` under one GitHub label, followed by YouTube `@linkymeadow`. Use 16px above the list and between groups. Show each label once on its own line above its links, with a 2px gap between elements, on both mobile and desktop. Identify `linkymeadow` as an organization and `linkymeadow-bot` as an automation account. Use muted labels, the general link color, and 16px text. Allow link text to wrap. Open the main site and account links in a new tab with `rel="noopener noreferrer"`; keep the operations notice link in the current tab.
 - **Links:** Keep underlines and increase their thickness to 2px on hover.
 - **Keyboard navigation:** Preserve visible focus indicators and the skip-to-content link.
 

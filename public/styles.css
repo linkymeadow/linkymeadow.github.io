@@ -48,13 +48,19 @@ h1 { font-size: 2rem; font-weight: 800; }
 .notice-body p + p { margin-top: 12px; }
 .notice-note { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
 .about { padding-block: 36px; }
-.about h2 { font-size: 1.125rem; font-weight: 750; }
+.about h2, .official-accounts h2 { font-size: 1.125rem; font-weight: 750; }
 .situations { margin: 20px 0 0; padding: 0; list-style: none; }
 .situations li { display: grid; gap: 2px; }
 .situations li + li { margin-top: 16px; }
 .situations strong { font-size: 16px; font-weight: 700; }
 .situations span { color: var(--muted); font-size: 16px; }
 .bookmark-note { margin-top: 24px; color: var(--muted); font-size: 16px; }
+.official-accounts { padding-bottom: 36px; }
+.account-note { margin-top: 12px; color: var(--muted); font-size: 16px; }
+.account-links { display: grid; gap: 16px; margin: 16px 0 0; padding: 0; list-style: none; font-size: 16px; }
+.account-links li { display: grid; gap: 2px; }
+.account-links span { color: var(--muted); }
+.account-links a { display: inline-flex; align-items: center; justify-self: start; min-height: 44px; max-width: 100%; overflow-wrap: anywhere; }
 .skip-link { position: absolute; z-index: 1; top: 8px; left: 20px; padding: 12px 16px; background: var(--paper); transform: translateY(-200%); }
 .skip-link:focus { transform: translateY(0); }
 
@@ -68,6 +74,7 @@ h1 { font-size: 2rem; font-weight: 800; }
   .notice { padding: 36px; }
   .notice h2 { font-size: 1.625rem; }
   .about { padding-block: 40px; }
+  .official-accounts { padding-bottom: 40px; }
 }
 
 @media (min-width: 48rem) {
@@ -98,5 +105,6 @@ h1 { font-size: 2rem; font-weight: 800; }
   .page { width: 100%; }
   .skip-link { display: none; }
   .site-header, .intro, .about { padding-block: 12px; }
+  .official-accounts { padding-bottom: 12px; }
   .notice { break-inside: avoid; }
 }

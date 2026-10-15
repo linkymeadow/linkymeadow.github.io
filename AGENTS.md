@@ -21,7 +21,7 @@
 - Notices are updated manually by the operator. Do not present “공지 없음” (no notices) as confirmation of normal operation or a real-time status check.
 - When publishing or editing an actual notice, update its status, title, body, displayed timestamp, and `datetime` together. Use Korea Standard Time.
 - Do not change the notice timestamp when only design or metadata changes.
-- Display the main site address above the operations notice address. Preserve `target="_blank"` and `rel="noopener noreferrer"` on the main site link.
+- Show only the main site address in the top address panel. List both site addresses in the lower verification section, with the main site first. Preserve `target="_blank"` and `rel="noopener noreferrer"` on main site links.
 - Remove the `main-site-address` row when posting a notice that the main domain cannot be trusted. Do not add automatic redirects.
 - When changing the canonical URL, check the related URLs in the canonical link, OG tags, `robots.txt`, and `sitemap.xml` together.
 
