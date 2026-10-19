@@ -25,8 +25,6 @@ colors:
   status-text-dark: "#78d8cf"
 typography:
   brand: { fontFamily: "Pretendard Variable", fontSize: 1.125rem, fontWeight: 750, lineHeight: 1.75 }
-  page-title: { fontFamily: "Pretendard Variable", fontSize: 2rem, fontWeight: 800, lineHeight: 1.45, letterSpacing: -0.04em }
-  page-title-wide: { fontFamily: "Pretendard Variable", fontSize: 2.25rem, fontWeight: 800, lineHeight: 1.45, letterSpacing: -0.04em }
   notice-title: { fontFamily: "Pretendard Variable", fontSize: 1.5rem, fontWeight: 750, lineHeight: 1.45, letterSpacing: -0.04em }
   notice-title-wide: { fontFamily: "Pretendard Variable", fontSize: 1.625rem, fontWeight: 750, lineHeight: 1.45, letterSpacing: -0.04em }
   section-title: { fontFamily: "Pretendard Variable", fontSize: 1.125rem, fontWeight: 750, lineHeight: 1.45, letterSpacing: -0.04em }
@@ -57,8 +55,6 @@ components:
   page: { backgroundColor: "{colors.neutral}", textColor: "{colors.primary}", typography: "{typography.body}" }
   page-dark: { backgroundColor: "{colors.neutral-dark}", textColor: "{colors.primary-dark}" }
   brand: { typography: "{typography.brand}" }
-  page-title: { typography: "{typography.page-title}" }
-  page-title-wide: { typography: "{typography.page-title-wide}" }
   notice: { backgroundColor: "{colors.surface}", textColor: "{colors.primary}", typography: "{typography.body}", rounded: "{rounded.card}", padding: "{spacing.xl}" }
   notice-wide: { padding: "{spacing.xxl}" }
   notice-dark: { backgroundColor: "{colors.surface-dark}", textColor: "{colors.primary-dark}" }
@@ -121,10 +117,9 @@ The root font size is 100% by default, 106.25% at 48rem and above, and 112.5% at
 | Role | Default token | At 40rem and above |
 | --- | --- | --- |
 | Site name | `brand` | Unchanged |
-| Page title | `page-title` | `page-title-wide` |
 | Notice title | `notice-title` | `notice-title-wide` |
 | Supporting section title | `section-title` | Unchanged |
-| Body and introduction | `body` | Unchanged |
+| Body | `body` | Unchanged |
 | Updated timestamp, address labels, and supporting notes | `caption` | Unchanged |
 | Status badge | `status` | Unchanged |
 | Address links | `address-link` | Unchanged |
@@ -137,12 +132,11 @@ Use a line height of 1.75 for body text and 1.45 for headings. Situation titles 
 
 Center the content within a maximum width of 880px. On narrow screens, keep 20px of outer space on each side. Avoid excessive top spacing that pushes notices farther down the page.
 
-The reading order is: site name → page title and introduction → address panel → notice card → situations in which visitors should check this page → official addresses and accounts.
+The reading order is: site name → address panel → notice card → situations in which visitors should check this page → official addresses and accounts. There is no separate page title or introduction block above the address panel.
 
 | Area | Default | At 40rem and above |
 | --- | --- | --- |
 | Header top and bottom padding | 16px | 20px |
-| Introduction top / bottom padding | 12px / 24px | 16px / 24px |
 | Address panel vertical / horizontal padding | 8px / 16px | 8px / 24px |
 | Notice card padding | 24px | 36px |
 | Supporting section top and bottom padding | 36px | 40px |

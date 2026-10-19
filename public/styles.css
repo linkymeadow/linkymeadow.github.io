@@ -22,17 +22,13 @@ body { margin: 0; }
 a { color: var(--accent); text-underline-offset: 0.24em; }
 a:hover { text-decoration-thickness: 2px; }
 a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
-h1, h2, p { margin: 0; }
-h1, h2 { line-height: 1.45; letter-spacing: -0.04em; text-wrap: balance; word-break: keep-all; overflow-wrap: anywhere; }
+h2, p { margin: 0; }
+h2 { line-height: 1.45; letter-spacing: -0.04em; text-wrap: balance; word-break: keep-all; overflow-wrap: anywhere; }
 p, li { word-break: keep-all; overflow-wrap: anywhere; }
 
 .page { width: min(100% - 40px, 880px); margin-inline: auto; }
 .site-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-block: 16px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: var(--ink); font-size: 1.125rem; font-weight: 750; text-decoration: none; }
-.intro { padding-block: 12px 24px; }
-h1 { font-size: 2rem; font-weight: 800; }
-.intro-description { margin-top: 16px; color: var(--muted); }
-.desktop-break { display: none; }
 .official-address { display: grid; gap: 4px; padding: 8px 16px; border-radius: 12px; color: var(--address-ink); background: var(--accent-soft); }
 .address-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0 24px; }
 .address-row > span { flex: 0 0 8rem; font-size: 0.875rem; }
@@ -66,9 +62,6 @@ h1 { font-size: 2rem; font-weight: 800; }
 
 @media (min-width: 40rem) {
   .site-header { padding-block: 20px; }
-  .intro { padding-block: 16px 24px; }
-  h1 { font-size: 2.25rem; }
-  .desktop-break { display: inline; }
   .mobile-break { display: none; }
   .official-address { padding-inline: 24px; }
   .notice { padding: 36px; }
@@ -104,7 +97,7 @@ h1 { font-size: 2rem; font-weight: 800; }
   :root { color-scheme: light; --canvas: #fff; --paper: #fff; --ink: #000; --muted: #333; --rule: #bbb; --accent: #000; --accent-soft: #fff; --address-ink: #000; --status-bg: #fff; --status-ink: #000; font-size: 12pt; }
   .page { width: 100%; }
   .skip-link { display: none; }
-  .site-header, .intro, .about { padding-block: 12px; }
+  .site-header, .about { padding-block: 12px; }
   .official-accounts { padding-bottom: 12px; }
   .notice { break-inside: avoid; }
 }
