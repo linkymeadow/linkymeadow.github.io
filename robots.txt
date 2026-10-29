@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+User-agent: ia_archiver
+User-agent: archive.org_bot
+User-agent: CCBot
+User-agent: Arquivo-web-crawler
+Disallow: /
